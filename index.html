@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="block-1"></div>
+        <div class="block-2"></div>
+        <div class="block-3"></div>
+        <di4 class="block-4"></di4>
+        <div class="block-5"></div>
+    </main>
+    <button id="btn ">Change colors</button>
+    <script>
+        const btn = document.querySelector('#btn');
+        const rc = () => Math.random() * (255 - 0) + 0;
+        const blocks = document.querySelectorAll('[class^="block"]'); 
+        btn.addEventListener("click", () => {
+            blocks.forEach(b => {
+                b.style.backgroundColor = `rgba(${rc()}, ${rc()}, ${rc()})`
+            })
+        })
+    </script>
+</body>
+
+</html>
